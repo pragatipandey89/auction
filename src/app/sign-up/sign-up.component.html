@@ -1,0 +1,373 @@
+<div id="signUpDialogBOX" class="mt-10 sm:mt-0">
+  <div class="md:grid md:grid-cols-2 md:gap-6">
+    <h1>Sign Up</h1>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form [formGroup]="myreact" action="#" method="POST">
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="first_name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Full name</label
+                >
+                <input
+                  formControlName="fullName"
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  placeholder="Full Name"
+                  aria-describedby="name"
+                  autocomplete="given-name"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    !myreact.get('fullName').valid &&
+                    myreact.get('fullName').touched
+                  "
+                >
+                  This Field is required</small
+                >
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="last_name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Password
+                </label>
+                <input
+                  formControlName="Password"
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  aria-describedby="passwordHelpBlock"
+                  placeholder="Password"
+                  autocomplete="family-name"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  Your password must be 8-20 characters long, contain letters
+                  and numbers.
+                </small>
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    !myreact.get('Password').valid &&
+                    myreact.get('Password').touched
+                  "
+                >
+                  This Field is required</small
+                >
+              </div>
+
+              <div class="col-span-6 sm:col-span-4">
+                <label
+                  for="email_address"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email address</label
+                >
+                <input
+                  formControlName="email"
+                  type="text"
+                  name="email_address"
+                  id="email_address"
+                  placeholder="email"
+                  autocomplete="email"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+                <small
+                  class="text-danger"
+                  *ngIf="
+                    !myreact.get('email').valid && myreact.get('email').touched
+                  "
+                >
+                  Please Enter Valid Email</small
+                >
+              </div>
+
+              <div class="col-span-6 sm:col-span-4">
+                <label
+                  for="email_address"
+                  class="block text-sm font-medium text-gray-700"
+                  >Register As
+                </label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    formControlName="register"
+                    type="radio"
+                    name="register"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label
+                    class="
+                      block
+                      text-sm
+                      font-medium
+                      text-gray-700
+                      form-check-label
+                    "
+                    for="inlineRadio1"
+                    >SELLER</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    formControlName="register"
+                    type="radio"
+                    name="register"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label
+                    class="
+                      block
+                      text-sm
+                      font-medium
+                      text-gray-700
+                      form-check-label
+                    "
+                    for="inlineRadio2"
+                    >BUYER</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="country"
+                  class="block text-sm font-medium text-gray-700"
+                  >State / Province</label
+                >
+                <select
+                  formControlName="State"
+                  id="country"
+                  name="country"
+                  autocomplete="country"
+                  class="
+                    mt-1
+                    block
+                    w-full
+                    py-2
+                    px-3
+                    border border-gray-300
+                    bg-white
+                    rounded-md
+                    shadow-sm
+                    focus:outline-none
+                    focus:ring-indigo-500
+                    focus:border-indigo-500
+                    sm:text-sm
+                  "
+                >
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Andaman and Nicobar Islands">
+                    Andaman and Nicobar Islands
+                  </option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Dadar and Nagar Haveli">
+                    Dadar and Nagar Haveli
+                  </option>
+                  <option value="Daman and Diu">Daman and Diu</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="Street address"
+                  class="block text-sm font-medium text-gray-700"
+                  >Address
+                </label>
+                <input
+                  formControlName="Address"
+                  type="text"
+                  name="street_address"
+                  placeholder="Address"
+                  id="street_address"
+                  autocomplete="street-address"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                <label
+                  for="city"
+                  class="block text-sm font-medium text-gray-700"
+                  >City</label
+                >
+                <input
+                  formControlName="City"
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="City"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <label
+                  for="postal_code"
+                  class="block text-sm font-medium text-gray-700"
+                  >ZIP / Postal</label
+                >
+                <input
+                  formControlName="ZIP"
+                  type="text"
+                  name="postal_code"
+                  id="postal_code"
+                  placeholder="ZIP"
+                  autocomplete="postal-code"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <label
+                  for="state"
+                  class="block text-sm font-medium text-gray-700"
+                  >Phone No.
+                </label>
+                <input
+                  formControlName="Phone No."
+                  type="text"
+                  name="state"
+                  id="state"
+                  placeholder="123-4567-890"
+                  class="
+                    mt-1
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-sm
+                    border-gray-300
+                    rounded-md
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button
+              (click)="onSubmit()"
+              type="submit"
+              [disabled]="myreact.invalid && !myreact.dirty"
+              class="
+                inline-flex
+                justify-center
+                py-2
+                px-4
+                border border-transparent
+                shadow-sm
+                text-sm
+                font-medium
+                rounded-md
+                text-white
+                bg-indigo-600
+                hover:bg-indigo-700
+                focus:outline-none
+                focus:ring-2
+                focus:ring-offset-2
+                focus:ring-indigo-500
+              "
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success! </strong> Your product has been posted for auction successfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form [formGroup]="submitForm" action="#" method="POST">
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">Item Name</label>
+    <div class="col-10">
+      <input formControlName="Item Name" class="form-control" type="text" id="example-text-input">
+      <span class="text-danger" *ngIf="!submitForm.get('Item Name').valid && submitForm.get('Item Name').touched">This is required</span>
+    </div>
+  </div>
+  
+  <div class="table">
+    <div class="form-group table-cell">
+      <label for="example-search-input" class="col-2 col-form-label">Item Condition</label>
+      <div class="col-10 ">
+        <select formControlName="Item Condition"
+          class="custom-select mt-1 block w-full py-2 px-10 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <option value="1">Old</option>
+          <option value="2">New</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-group table-cell">
+      <label for="example-search-input" class="col-2 col-form-label">Item Category</label>
+      <div class="col-10">
+        <select formControlName="Item Category"
+          class="custom-select mt-1 block w-full py-2 px-10 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <option value="1">Antique and Classic automobiles and motorcycles</option>
+          <option value="2">Antique furniture</option>
+          <option value="3">Antique Statue</option>
+          <option value="4">Historical Memorabilia.</option>
+          <option value="5">Gold Coins</option>
+          <option value="6">Jewelry</option>
+          <option value="7">Silver Coins</option>
+          <option value="8">Sports Memorabilia,</option>
+          <option value="9">Paintings</option>
+          <option value="10">Other</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Brand</label>
+    <div class="col-10">
+      <input class="form-control w-px" type="text" id="example-text-input" formControlName="Brand">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="example-month-input" class="col-2 col-form-label">In Possesion from</label>
+    <div class="col-10">
+      <input class="form-control" type="month" id="example-month-input" formControlName="possesion">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="example-number-input" class="col-2 col-form-label">Stating Bid</label>
+    <div class="col-10">
+      <input class="form-control" type="number" id="example-number-input" formControlName="startingBid">
+      <span class="help-block">Enter the amount in Rupee</span>
+    </div>
+  </div>
+  
+  <div class="table">
+    <label for="example-datetime-local-input" class="block fs-5 font-small text-gray-800">Auction Duration</label>
+    <div class="table-cell">
+      <label for="example-datetime-local-input" class="col-2 col-form-label">Starting Time</label>
+      <div class="col-10">
+        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" formControlName="startingTime">
+      </div>
+    </div>
+  
+    <div class="table-cell">
+      <label for="example-datetime-local-input" class="col-2 col-form-label">Ending Time</label>
+      <div class="col-10">
+        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" formControlName="endingTime">
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleTextarea">Product Description</label>
+    <textarea placeholder="Enter product description" class="form-control" id="exampleTextarea" rows="3" formControlName="productDescription"></textarea>
+  </div>
+  
+  <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+    <button (click)="onSubmit()" type="submit" [disabled]="submitForm.invalid "
+      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+      Save
+    </button>
+  </div>
+</form>
+
+

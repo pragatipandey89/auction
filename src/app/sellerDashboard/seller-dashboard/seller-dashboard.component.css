@@ -1,0 +1,46 @@
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* 
+form{
+  margin: 50px;  
+} */
+*{
+    contain: content;
+}
+.sellerKaDisplay{
+  display: flex;
+    margin-left: 5px;
+}
+
+/* Navigation Part */
+.sideKaNavi{
+  /* margin: 2%; */
+  background-color: rgb(142, 94, 221);
+  flex-direction:column;
+  width: 10%;
+  height: 75vh;
+}
+
+.menubarWaleItem{
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: #5306eb1f;
+    height: 75vh;
+}
+a{
+  /* margin: 3% 30% 3% 30%; */
+  margin: 3%;
+    display: block;
+    padding: 23%;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 15px;
+    color: black;
+}
+
+/* Display Part */
+
+
+/* .diplayWalaArea{
+  background-color: green;
+} */

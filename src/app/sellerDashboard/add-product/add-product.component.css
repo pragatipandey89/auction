@@ -1,0 +1,9 @@
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgb(255, 0, 0, 0.2);
+}
+input.ng-valid{
+    border: 1px solid green;
+    box-shadow: 0 0 13px inset rgba(0, 255, 13, 0.2);
+}

@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+#hi{
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    margin: 6% 43% 0px 43%;
+    border: 1px solid black;
+    padding: 1%;
+}
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgb(255, 0, 0, 0.2);
+}

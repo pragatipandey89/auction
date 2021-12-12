@@ -1,0 +1,10 @@
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgb(255, 0, 0, 0.2);
+}
+
+#signUpDialogBOX{
+    margin: 4% 20% 0px 20%;
+    border: 1px solid black;
+    padding: 1%;
+}
